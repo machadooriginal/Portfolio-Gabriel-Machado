@@ -11,7 +11,7 @@ body {
   background-color: black;
   height: 100vh;
   max-width: 100vw;
-  
+  overflow: hidden;
 }
 
 .interface{
@@ -20,13 +20,13 @@ body {
 }
 
 .main-footer{
-position: sticky; 
+  position: fixed;
  display: flex;
  justify-content:center;
  width: 100%px;
+ bottom: 0%;
  background-color: #000000;
- transform: translateY(1500%);
-
+ left: 41%;
 }
 
 
@@ -75,7 +75,7 @@ text-align: center;
 justify-content: space-around;
 padding-left: 30%;
 padding-right: 30%;
-transform: translateY(-20%);
+transform: translateY(0%);
 }
 .icon1{
  left: 16%;
@@ -212,7 +212,7 @@ position: relative;
 
 
 section.topo {
-  padding: 40px 4%;
+  padding: -10px 4%;
 }
 
 section.topo .flex{
@@ -269,17 +269,18 @@ section.topo .flex{
 
 .abrir-menu{
   display: block;
+  width: 90%;
 }
 
   header{
     padding: 58px;
-            
+           
   }
 
   .fundo-animado{
     position: relative;
-    padding: 5px;
-    transform: translateY(3%);
+    padding: 10px;
+    transform: translateY(13%);
   }
 
   img{ 
@@ -292,10 +293,16 @@ section.topo .flex{
     flex-direction: column-reverse;
   }
 
+.text-topo{
+transform: translate(5%,5%);
+
+
+}
+
   .text-topo h3{
     position: relative;
     font-size: 30px;
-    transform: translateY(-650%);
+    transform: translateY(-620%);
   }
 
   .text-topo h3 span{
@@ -308,13 +315,13 @@ section.topo .flex{
   .text-topo h5{
     position: relative;
     font-size: 30px;
-    transform: translateY(-1290%);
+    transform: translateY(-1250%);
   }
 
   .text-topo h6{
     position: relative;
     font-size: 20px;
-    transform: translateY(-1980%);
+    transform: translateY(-1950%);
   }
 
   .text-topo p{
@@ -324,32 +331,42 @@ section.topo .flex{
     line-height: 25px;
   }
 
-  .img-formação img{
+  
+
+.img-formação img{
 left: 0;
+transform: translateY(-11%);
+
   }
 
 .img-profissional img{
 left: 0%;
+transform: translateY(-11%);
 }
 
 .formulario{
   position: relative;
   display: flex;
-  transform: translate(-115%, -50%);
+  transform: translate(-0%, -10%);
 }
+
+.redes{
+  position: relative;
+  left: 15%;
+}
+
 
 .aviao img{
   position: relative;
-  transform: translate(-900%, 120%);
+  transform: translate(-50%, 240%);
 }
-
 
 .texto-mobile h3{
   position: relative;
   color: #fcf8f8;
   font-size: 25px;
-  right: -5%;
-  top: -570px;
+  right: -0%;
+  top: -650px;
 }
 
 .texto-mobile h3 span{
@@ -359,49 +376,56 @@ right: -10%;
 }
 
 .main-footer{
-  position: sticky; 
-   display: flex;
-   justify-content:center;
-   width: 100%px;
-   background-color: #000000;
-   transform: translateY(1500%);
-  
-  }
-  
-  
-  .main-footer .actions img{
-    width: 35px;
-    right: 1px;
-    top: 1310%;
+  position: fixed;
+  display: flex;
+  justify-content:center;
+  width: 100%px;
+  bottom: 0%;
+  background-color: #000000;
+  left: 21%;
+  top: 100%;
   }
 
-.main-footer{
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
+  .text-topo5 {
+    position: absolute;
+    display: flex;
+    left: 10%;
+  }
+
+  .text-topo5 h5{
+    height: 48px;
+    
+ }
 
 .text-topo5 h5{
   display: flex;
-transform: translateY(-180%);
+transform: translateY(-190%);
+}
+
+.text-topo5 h5 span{
+  position: relative;
+  right: -2%;
 }
 
 .foto img{
   position: relative;
-  left: 190%;
-  top: -10%;
-font-size: 10px;}
+  display: flex;
+  left: 0%;
+  top: 10%;
+}
+
 
 .videos{
   position: relative;
   right: 85%;
-  top: 450px;
+  top: 400px;
 }
 
 .video2{
   position: relative;
-  top: 250px;
-  right: 235%;
-
+  top: -390px;
+  right: 35%;
+ 
 }
 
 .icones-home{
@@ -455,15 +479,18 @@ header .btn-contato2 button{
 /* Formação */ 
 
 .img-formação{
+  display: flex;
+  justify-content: center;
 width: 100%;
 height: 100%;
 }
   
   .img-formação img{
-    position: absolute;
-    width: 450px;
-    right:40%;
-    top: 127px;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 550px;
+    top: -70px;
   }
   
 
@@ -472,24 +499,27 @@ height: 100%;
  
 
 .text-topo4 h5{
-  position: absolute;
+  display: flex;
+  justify-content: center;
   color: #fcf8f8;
   font-size: 40px;
-  transform: translate(132%, -650%);
- }
+transform: translate(0%, -720%); 
+}
 
  .container{
   display: flex;
+  justify-content: center;
+  transform: translate(0, 25%);
 }
 
 .text-topo4 h5 span{
   color: orange;
   font-size: 40px;
+  
  }
 
  form{
  max-width: 30rem;
- transform: translate(120%, 60%); 
  }
 
  input,
@@ -543,45 +573,49 @@ height: 100%;
 
  .aviao{
   position: absolute;
-transform: translate(1330%, 510%); 
+  transform: translate(340%, 250%); 
 }
 
+.redes{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  transform: translate(0%, -485%);
+}
 
 .insta{
-  width: 50px;
-  transform: translate(1700%, -422%);
+  width: 45px;
+  transform: translateY(20%);
 }
 
 .whats{
  width: 60px;
- transform: translate(1100%, -345%);
+ transform: translatey(2%);
 }
 
 .linkedin{
 width: 60px;
-transform: translate(780%, -345%);
+transform: translateY(5%);
 }
 
 .github{
   width: 50px;
-  transform: translate(1600%, -425%);
+  transform: translateY(10%);
 }
 
 /* Atuação profissional */
 
-
-.img-profissional img{
-  position: absolute;
-  width: 450px;
-  right:40%;
-  top: 127px;
+.img-profissional{
+  display: flex;
+  justify-content: center;
 }
 
-.img-work img{
-position: absolute;
-left: 25%;
-top: 220px;
-width: 250px;
+.img-profissional img{
+  display: flex;
+    justify-content: center;
+    width: 620px;
+    height: 550px;
+    top: -70px;
 }
 
 /*PORFÓLIO*/
@@ -589,10 +623,10 @@ width: 250px;
 .text-topo5{
   display: flex;
   justify-content: center;
+  transform: translateY(-80%);
 }
 
 .text-topo5 h5{
-  position: relative;
   color: #fcf8f8;
   font-size: 40px;
 }
@@ -601,24 +635,38 @@ width: 250px;
   color: orange;
 }
 
-.videos video{ position: absolute; 
-  display: flex; 
-  width: 350px ;
-   height: 400px;
-    transform: translate(100%, -25%);
+.videos{
+display: flex;
+justify-content: center;
+}
+
+.videos video{ 
+ 
+ display: flex;
+ justify-content: center;
+ width: 300px ; 
+ height: 350px; 
+    transform: translate(-155%, -100%);
  } 
 .videos .video2{ 
   display: flex; 
-  width: 350px ; 
-  height: 400px; 
-  transform: translate(350%, -25%); }
+  justify-content: center;
+  width: 300px ; 
+  height: 350px; 
+  transform: translate(155%, -200%);
+}
 
+.foto{
+  display: flex;
+  justify-content: center;
+}
 
 .foto img{
-  position: absolute;
-  width: 400px;
-  height: 550px;
-  transform: translate(-190%, 50%);
+display: flex; 
+justify-content: center;
+ width: 400px;
+height: 400px;
+transform: translate(0%, -11%);
 }
 
 
