@@ -1,0 +1,624 @@
+/* Estilo geral*/
+*{
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  max-width: 100vw;
+  
+}
+
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main-footer{
+position: sticky; 
+ display: flex;
+ justify-content:center;
+ width: 100%px;
+ background-color: #000000;
+ transform: translateY(1500%);
+
+}
+
+
+.main-footer .actions{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main-footer .actions img{
+  width: 40px;
+}
+  
+  
+  /* Estilo do cabeçalho */
+
+.flex{
+  display: flex;
+}
+
+header{
+  padding: 40px 4%;     
+}
+
+header > .interface{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+img{ 
+  position: relative;
+  width: 80px;
+  right: 1px;
+  top: -0px;
+}
+
+.logo{
+  position: relative;
+  right: 8px;
+}
+
+.icones-home{
+display: flex;
+text-align: center;
+justify-content: space-around;
+padding-left: 30%;
+padding-right: 30%;
+transform: translateY(-20%);
+}
+.icon1{
+ left: 16%;
+}
+
+.icon2{
+  left: 21%;
+  top: -87px;
+ }
+
+ .icon3{
+  left: 26%;
+  top: -172px;
+ }
+
+ .icon4{
+  left: 31%;
+  top: -260px;
+ }
+
+header a{
+  color: #fcf8f8;;
+  text-decoration: none;
+}
+
+header .menu-desktop a:hover{
+  color: orange;
+  transform: scale(1.05);
+}
+
+header nav.menu-desktop ul{
+ list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+
+.btn-contato{
+  position: relative;  
+  right: 1.6%;
+  top: -10px;
+}
+
+header .btn-contato button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600px;
+  background-color: orange;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+a:active{
+  text-decoration: none;
+  color: orange;
+}
+
+.abrir-menu {
+  display: none;
+}
+
+/* Pagina de inicio */
+
+/* ESTILO MENU MOBILE */
+
+.abrir-menu i{
+  color: orange;
+  position: relative;
+  left: 105%;
+  top: -55px;
+  font-size: 50px;
+}
+
+.menu-mobile{
+  background-color:black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 99999;
+  width:0%;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
+
+.menu-mobile .btn-fechar{
+position: relative;
+  color: orange;
+  padding: 5px;
+  right: 100%;
+  top: 8%;
+}
+
+.menu-mobile nav ul{
+  text-align: right;
+}
+
+
+.menu-mobile nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+  background-color: orange;
+  color: black
+}
+
+.overlay-menu{
+  background-color:#05050595;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+
+
+section.topo {
+  padding: 40px 4%;
+}
+
+section.topo .flex{
+  align-items: center;
+  gap: 90px;
+}
+
+.text-topo{
+  color: #fcf8f8;
+  font-size: 40px;  
+}
+  
+.text-topo h3 span{
+ color: orange;
+ font-size: 35px;
+}
+
+.text-topo h3{
+  font-size: 35px;
+}
+
+.text-topo p{
+  font-size: 20px;
+}
+
+
+.img-topo {
+  right: 1000px; float: left;
+}
+
+.fundo-animado {
+  width: 380px;
+  height: 350px;
+  right: 2%;
+}
+
+.img-topo .fundo-animado {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+100%{
+  top: 30px;
+}
+
+}
+
+@media screen and (max-width: 1020px){
+
+.abrir-menu{
+  display: block;
+}
+
+  header{
+    padding: 58px;
+            
+  }
+
+  .fundo-animado{
+    position: relative;
+    padding: 5px;
+    transform: translateY(3%);
+  }
+
+  img{ 
+    width: 50px;
+    right: 48px;
+    top: -50px;
+  }
+
+  .flex{
+    flex-direction: column-reverse;
+  }
+
+  .text-topo h3{
+    position: relative;
+    font-size: 30px;
+    transform: translateY(-650%);
+  }
+
+  .text-topo h3 span{
+    color: orange;
+    font-size: 35px;
+    line-height: 35px;
+   }
+   
+
+  .text-topo h5{
+    position: relative;
+    font-size: 30px;
+    transform: translateY(-1290%);
+  }
+
+  .text-topo h6{
+    position: relative;
+    font-size: 20px;
+    transform: translateY(-1980%);
+  }
+
+  .text-topo p{
+    position: relative;
+    transform: translateY(2%);
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .img-formação img{
+left: 0;
+  }
+
+.img-profissional img{
+left: 0%;
+}
+
+.formulario{
+  position: relative;
+  display: flex;
+  transform: translate(-115%, -50%);
+}
+
+.aviao img{
+  position: relative;
+  transform: translate(-900%, 120%);
+}
+
+
+.texto-mobile h3{
+  position: relative;
+  color: #fcf8f8;
+  font-size: 25px;
+  right: -5%;
+  top: -570px;
+}
+
+.texto-mobile h3 span{
+  color: orange;
+position: relative;
+right: -10%;
+}
+
+.main-footer{
+  position: sticky; 
+   display: flex;
+   justify-content:center;
+   width: 100%px;
+   background-color: #000000;
+   transform: translateY(1500%);
+  
+  }
+  
+  
+  .main-footer .actions img{
+    width: 35px;
+    right: 1px;
+    top: 1310%;
+  }
+
+.main-footer{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.text-topo5 h5{
+  display: flex;
+transform: translateY(-180%);
+}
+
+.foto img{
+  position: relative;
+  left: 190%;
+  top: -10%;
+font-size: 10px;}
+
+.videos{
+  position: relative;
+  right: 85%;
+  top: 450px;
+}
+
+.video2{
+  position: relative;
+  top: 250px;
+  right: 235%;
+
+}
+
+.icones-home{
+ position: relative;
+ top: 5%;
+ right: -5%;
+}
+
+  /*cabeçalho */
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+}
+
+
+.abrir-menu i{
+  display: block;
+}
+
+
+header .formação .interface{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.interface .logo2{
+  position: relative;
+  top: -47px;
+  right: 8px ;
+}
+  
+
+.btn-contato2{
+  position: relative;  
+  left: 719%;
+  top: 6px;
+}
+
+header .btn-contato2 button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600px;
+  background-color: orange;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Formação */ 
+
+.img-formação{
+width: 100%;
+height: 100%;
+}
+  
+  .img-formação img{
+    position: absolute;
+    width: 450px;
+    right:40%;
+    top: 127px;
+  }
+  
+
+ /* Contato */
+
+ 
+
+.text-topo4 h5{
+  position: absolute;
+  color: #fcf8f8;
+  font-size: 40px;
+  transform: translate(132%, -650%);
+ }
+
+ .container{
+  display: flex;
+}
+
+.text-topo4 h5 span{
+  color: orange;
+  font-size: 40px;
+ }
+
+ form{
+ max-width: 30rem;
+ transform: translate(120%, 60%); 
+ }
+
+ input,
+ textarea{
+  width: 100%;
+  font: inherit;
+  padding: 1.25rem;
+  font-weight: 700;
+ }
+
+ input,
+ textarea{
+  margin-bottom: 1rem;
+  color: #fdfdfd;
+  border: 1% solid transparent ;
+  background:black;
+  border-radius: 1.125rem;
+  transition: border-color 0.3s;
+  box-shadow: 0.3s;
+ }
+
+ .field:hover{
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 0 0 .3125rem orange;
+ }
+
+ .field:focus{
+  outline: none;
+  border-color: orange;
+  box-shadow: 0 0 0 0 .3125rem orange;
+ }
+
+ .botao{
+  width: 100%;
+  font: inherit;
+  padding: 1.25rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 99px;
+  color: #fcf8f8;
+  background: orange;
+  cursor: pointer;
+  transition: 0.3s;
+ }
+
+ .botao:hover {
+  outline: none;
+  background: rgb(255, 128, 0);
+ }
+
+ .aviao{
+  position: absolute;
+transform: translate(1330%, 510%); 
+}
+
+
+.insta{
+  width: 50px;
+  transform: translate(1700%, -422%);
+}
+
+.whats{
+ width: 60px;
+ transform: translate(1100%, -345%);
+}
+
+.linkedin{
+width: 60px;
+transform: translate(780%, -345%);
+}
+
+.github{
+  width: 50px;
+  transform: translate(1600%, -425%);
+}
+
+/* Atuação profissional */
+
+
+.img-profissional img{
+  position: absolute;
+  width: 450px;
+  right:40%;
+  top: 127px;
+}
+
+.img-work img{
+position: absolute;
+left: 25%;
+top: 220px;
+width: 250px;
+}
+
+/*PORFÓLIO*/
+
+.text-topo5{
+  display: flex;
+  justify-content: center;
+}
+
+.text-topo5 h5{
+  position: relative;
+  color: #fcf8f8;
+  font-size: 40px;
+}
+
+.text-topo5 h5 span{
+  color: orange;
+}
+
+.videos video{ position: absolute; 
+  display: flex; 
+  width: 350px ;
+   height: 400px;
+    transform: translate(100%, -25%);
+ } 
+.videos .video2{ 
+  display: flex; 
+  width: 350px ; 
+  height: 400px; 
+  transform: translate(350%, -25%); }
+
+
+.foto img{
+  position: absolute;
+  width: 400px;
+  height: 550px;
+  transform: translate(-190%, 50%);
+}
+
+
