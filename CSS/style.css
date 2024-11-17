@@ -40,7 +40,7 @@ body {
 }
   
   
-  /* Estilo do cabeçalho */
+  /* Estilo na tela */
 
 .flex{
   display: flex;
@@ -54,7 +54,6 @@ header > .interface{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 img{ 
@@ -97,14 +96,19 @@ transform: translateY(0%);
  }
 
 header a{
-  color: #fcf8f8;;
+  color: #fcf8f8;
   text-decoration: none;
+}
+
+header .menu-desktop ul li a:active{
+  color: orange;
 }
 
 header .menu-desktop a:hover{
   color: orange;
   transform: scale(1.05);
 }
+
 
 header nav.menu-desktop ul{
  list-style-type: none;
@@ -114,6 +118,11 @@ header nav.menu-desktop ul li{
   display: inline-block;
   padding: 0 40px;
 }
+
+.active{
+  color: orange;
+}
+
 
 .btn-contato{
   position: relative;  
@@ -140,7 +149,7 @@ a:active{
   display: none;
 }
 
-/* Pagina de inicio */
+
 
 /* ESTILO MENU MOBILE */
 
@@ -267,112 +276,152 @@ section.topo .flex{
 
 @media screen and (max-width: 1020px){
 
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+
+  body {
+    position: fixed;
+    background-color: black;
+    overflow: hidden;
+  }
+
+
 .abrir-menu{
   display: block;
   width: 90%;
 }
 
-  header{
-    padding: 58px;
-           
-  }
-
-  .fundo-animado{
-    position: relative;
-    padding: 10px;
-    transform: translateY(13%);
-  }
-
-  img{ 
-    width: 50px;
-    right: 48px;
-    top: -50px;
-  }
-
-  .flex{
-    flex-direction: column-reverse;
-  }
-
-.text-topo{
-transform: translate(5%,5%);
-
-
+header{
+    padding: 58px;   
+    
 }
 
-  .text-topo h3{
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+.fundo-animado{
+    position: relative;
+    padding: 10px;
+    transform: translateY(10%);
+}
+
+img{ 
+    width: 50px;
+    right: 48px;
+    top: -55px;
+}
+
+.flex{
+    flex-direction: column-reverse;
+}
+
+.text-topo{
+transform: translate(2%,15%);
+}
+
+.text-topo h3{
     position: relative;
     font-size: 30px;
-    transform: translateY(-620%);
-  }
+    transform: translateY(-640%);
+}
 
-  .text-topo h3 span{
+.text-topo h3 span{
     color: orange;
     font-size: 35px;
     line-height: 35px;
-   }
+}
    
 
-  .text-topo h5{
+.text-topo h5{
     position: relative;
     font-size: 30px;
-    transform: translateY(-1250%);
-  }
+    transform: translateY(-1300%);
+}
 
-  .text-topo h6{
+.text-topo h6{
     position: relative;
     font-size: 20px;
     transform: translateY(-1950%);
-  }
+}
 
-  .text-topo p{
-    position: relative;
-    transform: translateY(2%);
-    font-size: 25px;
-    line-height: 25px;
-  }
+.text-topo p{
+  display: none;
+}
 
-  
+.icones-home{
+  display: none;
+}
 
 .img-formação img{
-left: 0;
-transform: translateY(-11%);
-
-  }
+  left: 0;
+  transform: translateY(-12%);
+  height: 20px;
+}
 
 .img-profissional img{
 left: 0%;
-transform: translateY(-11%);
+transform: translateY(-12%);
 }
+
 
 .formulario{
   position: relative;
   display: flex;
-  transform: translate(-0%, -10%);
+  transform: translate(-0%, 5%);
+  width: 100vw;
 }
 
 .redes{
-  position: relative;
-  left: 15%;
+display: flex;
+position: relative;
+left: 17%;
+z-index: 40;
 }
 
+.redes a img{
+  transform: translateY(50%);
+}
 
+.github{
+  display: flex;
+  top: -70%;
+}
+
+.insta{
+  display: flex;
+  top: -60%;
+}
+
+.aviao{
+  display: flex;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
 .aviao img{
   position: relative;
-  transform: translate(-50%, 240%);
+  display: flex;
+  transform: translate(20%, 60%);
 }
 
 .texto-mobile h3{
   position: relative;
+  display: flex;
+  justify-content: center;
   color: #fcf8f8;
-  font-size: 25px;
+  font-size: 35px;
   right: -0%;
-  top: -650px;
-}
+  top: -740px;
+  padding: 50%;}
 
 .texto-mobile h3 span{
   color: orange;
 position: relative;
-right: -10%;
+right: -5%;
 }
 
 .main-footer{
@@ -386,20 +435,14 @@ right: -10%;
   top: 100%;
   }
 
-  .text-topo5 {
-    position: absolute;
-    display: flex;
-    left: 10%;
-  }
-
-  .text-topo5 h5{
-    height: 48px;
-    
- }
+.text-topo5 {
+  display: flex;
+  text-align: center;
+}
 
 .text-topo5 h5{
   display: flex;
-transform: translateY(-190%);
+  transform: translateY(-120%)
 }
 
 .text-topo5 h5 span{
@@ -407,26 +450,6 @@ transform: translateY(-190%);
   right: -2%;
 }
 
-.foto img{
-  position: relative;
-  display: flex;
-  left: 0%;
-  top: 10%;
-}
-
-
-.videos{
-  position: relative;
-  right: 85%;
-  top: 400px;
-}
-
-.video2{
-  position: relative;
-  top: -390px;
-  right: 35%;
- 
-}
 
 .icones-home{
  position: relative;
@@ -434,47 +457,68 @@ transform: translateY(-190%);
  right: -5%;
 }
 
-  /*cabeçalho */
-  .menu-desktop, .btn-contato{
-    display: none;
-  }
+
+.fotos img{
+  margin: 0 auto;
+  display: flex;
+  top: -20%;
+  width: 95%;
+  left: 0%;
+  right: 0%;
 }
 
+h1{
+  display: flex;
+  width: 100vw;
+  transform: translateX(-1%);
+  font-size: 30px;
+}
+
+/*pagina de mensagem*/
+ 
+}
+
+h1 span{
+  color: orange;
+transform: translateX(5%);
+justify-content: center;}
+
+#removeAll{
+  display: flex;
+  background-color: orange;
+  border-radius: 99px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 2%;   
+  font-size: 15px;
+  align-items: center;
+}
+
+.back{
+ display: flex;
+ background-color: orange;
+ color: black;
+ text-decoration: none;
+ border-radius: 99px;
+ border: none;
+ cursor: pointer;
+ padding: 10px 2%;
+ font-size: 15px;
+ transform: translateY(-10%);
+}
+
+#messagesList{
+  display: flex; 
+  color: #fcf8f8;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  text-align: center;
+}
 
 .abrir-menu i{
   display: block;
 }
 
-
-header .formação .interface{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-.interface .logo2{
-  position: relative;
-  top: -47px;
-  right: 8px ;
-}
-  
-
-.btn-contato2{
-  position: relative;  
-  left: 719%;
-  top: 6px;
-}
-
-header .btn-contato2 button{
-  padding: 10px 40px;
-  font-size: 18px;
-  font-weight: 600px;
-  background-color: orange;
-  border: 0;
-  border-radius: 30px;
-  cursor: pointer;
-}
 
 /* Formação */ 
 
@@ -489,21 +533,19 @@ height: 100%;
     display: flex;
     justify-content: center;
     width: 600px;
-    height: 550px;
+    height: 557px;
     top: -70px;
   }
   
 
  /* Contato */
 
- 
-
 .text-topo4 h5{
   display: flex;
   justify-content: center;
   color: #fcf8f8;
   font-size: 40px;
-transform: translate(0%, -720%); 
+  transform: translate(0%, -720%); 
 }
 
  .container{
@@ -515,12 +557,11 @@ transform: translate(0%, -720%);
 .text-topo4 h5 span{
   color: orange;
   font-size: 40px;
-  
- }
+}
 
- form{
+form{
  max-width: 30rem;
- }
+}
 
  input,
  textarea{
@@ -614,11 +655,11 @@ transform: translateY(5%);
   display: flex;
     justify-content: center;
     width: 620px;
-    height: 550px;
+    height: 557px;
     top: -70px;
 }
 
-/*PORFÓLIO*/
+/*PORTFÓLIO*/
 
 .text-topo5{
   display: flex;
@@ -635,38 +676,102 @@ transform: translateY(5%);
   color: orange;
 }
 
-.videos{
-display: flex;
+.fotos{
+  position: relative;
+  width: 550px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+
+.imagem1, .imagem2{
+  position: absolute;
+ top: -10%;
+ left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.imagem1{
+  animation: fadeInOut 4s infinite;
+}
+
+.imagem2{
+  animation: fadeIn 4s infinite;
+}
+
+
+@keyframes fadeInOut {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0%, 49% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+
+/*Mensagens*/
+
+h1{
+  display: flex;
+  color: #fcf8f8;
 justify-content: center;
 }
 
-.videos video{ 
- 
- display: flex;
- justify-content: center;
- width: 300px ; 
- height: 350px; 
-    transform: translate(-155%, -100%);
- } 
-.videos .video2{ 
-  display: flex; 
-  justify-content: center;
-  width: 300px ; 
-  height: 350px; 
-  transform: translate(155%, -200%);
-}
+h1 span{
+  display: flex;
+  color: orange;
+transform: translateX(5%);
+justify-content: center;}
 
-.foto{
+#removeAll{
   display: flex;
   justify-content: center;
+  background-color: orange;
+  border-radius: 99px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 2%;   
+  margin: 0 auto;  
+  font-size: 15px;
+  transform: translateY(30%);
 }
 
-.foto img{
-display: flex; 
-justify-content: center;
- width: 400px;
-height: 400px;
-transform: translate(0%, -11%);
+a{
+  text-decoration: none;
+}
+
+.back{
+ display: flex;
+background-color: orange;
+ color: black;
+ text-decoration: none;
+ border-radius: 99px;
+ border: none;
+ cursor: pointer;
+ padding: 10px 2%;
+ font-size: 15px;
+ margin: auto;
+ transform: translateY(40%);
+}
+#messagesList{
+  display: flex;
+  justify-content: center;
+  color: #fcf8f8;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5%;
 }
 
 
